@@ -294,13 +294,15 @@
     .article-card,
     .tip-card,
     .faq-item,
-    .cta-card {
+    .cta-card,
+    .guide-card {
       padding: 24px;
     }
 
     .article-card h3,
     .tip-card h3,
-    .faq-item h3 {
+    .faq-item h3,
+    .guide-card h3 {
       margin: 0 0 10px;
       font-size: 1.06rem;
       letter-spacing: -0.02em;
@@ -308,7 +310,8 @@
 
     .article-card p,
     .tip-card p,
-    .faq-item p {
+    .faq-item p,
+    .guide-card p {
       margin: 0;
       color: var(--muted);
     }
@@ -404,6 +407,50 @@
       color: var(--muted);
     }
 
+    .guide-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(125, 211, 252, 0.26);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .guide-card .guide-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      color: #dff7ff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      margin-bottom: 14px;
+    }
+
+    .guide-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      font-weight: 800;
+      color: #e9f5ff;
+    }
+
+    .guide-link span {
+      transition: transform 0.2s ease;
+    }
+
+    .guide-card:hover .guide-link span {
+      transform: translateX(3px);
+    }
+
     .cta-card {
       text-align: center;
       background:
@@ -491,7 +538,8 @@
       .article-card,
       .tip-card,
       .faq-item,
-      .cta-card {
+      .cta-card,
+      .guide-card {
         padding: 20px;
       }
 
@@ -539,6 +587,7 @@
         <a href="#how">How it works</a>
         <a href="#mistakes">Common mistakes</a>
         <a href="#workflow">Workflow</a>
+        <a href="#related-guides">Related guides</a>
         <a href="#faq">FAQ</a>
       </nav>
 
@@ -771,6 +820,46 @@
       </div>
     </section>
 
+    <section id="related-guides">
+      <div class="container">
+        <div class="section-head">
+          <h2>Related guides</h2>
+          <p>
+            Pricing decisions get stronger when they connect to the rest of the workflow. These guides help you turn pricing into cleaner quotes, proposals, and invoices.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <a class="card guide-card" href="/freelance-quote-template/">
+            <div class="guide-kicker">Related guide</div>
+            <h3>Freelance Quote Template</h3>
+            <p>
+              Learn how to structure a quote that turns your internal pricing into something clients can understand and approve.
+            </p>
+            <div class="guide-link">Read guide <span>→</span></div>
+          </a>
+
+          <a class="card guide-card" href="/freelance-invoice-template/">
+            <div class="guide-kicker">Related guide</div>
+            <h3>Freelance Invoice Template</h3>
+            <p>
+              Learn how to send cleaner invoices after the scope and pricing have already been agreed.
+            </p>
+            <div class="guide-link">Read guide <span>→</span></div>
+          </a>
+
+          <a class="card guide-card" href="/freelance-proposal-template/">
+            <div class="guide-kicker">Related guide</div>
+            <h3>Freelance Proposal Template</h3>
+            <p>
+              Learn how to turn your final scope, pricing, and timeline into a polished client-facing proposal.
+            </p>
+            <div class="guide-link">Read guide <span>→</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section id="faq">
       <div class="container">
         <div class="section-head">
@@ -837,6 +926,7 @@
       <div class="small-links">
         <a href="/">Home</a>
         <a href="#workflow">Workflow</a>
+        <a href="#related-guides">Related guides</a>
         <a href="#faq">FAQ</a>
       </div>
     </div>
