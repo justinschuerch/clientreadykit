@@ -4,50 +4,1031 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Client Ready Kit | Pricing Calculator, Quote Builder & Invoice Template</title>
-  <meta name="description" content="Price projects faster, send cleaner proposals, and invoice professionally." />
+  <title>Client Ready Kit | Freelance Starter Pack for Pricing, Quotes, Invoices & Proposals</title>
+  <meta
+    name="description"
+    content="Client Ready Kit is a freelance starter pack with a pricing calculator, quote builder, invoice template, proposal template, and onboarding checklist."
+  />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://clientreadykit.com/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Client Ready Kit" />
-  <meta property="og:description" content="Price projects faster, send cleaner proposals, and invoice professionally." />
+  <meta
+    property="og:description"
+    content="Freelance starter pack for pricing, quotes, invoices, and proposals."
+  />
   <meta property="og:url" content="https://clientreadykit.com/" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Client Ready Kit" />
-  <meta name="twitter:description" content="Price projects faster, send cleaner proposals, and invoice professionally." />
+  <meta
+    name="twitter:description"
+    content="Freelance starter pack for pricing, quotes, invoices, and proposals."
+  />
+
+  <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
 
   <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0d1a2d;
+      --card: rgba(255, 255, 255, 0.06);
+      --card-strong: rgba(255, 255, 255, 0.09);
+      --text: #f8fbff;
+      --muted: #b8c4d8;
+      --line: rgba(255, 255, 255, 0.12);
+      --accent: #7dd3fc;
+      --accent-2: #a78bfa;
+      --accent-3: #34d399;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+      --max: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #fff;
-      display: grid;
-      place-items: center;
-      min-height: 100vh;
-      padding: 24px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(125, 211, 252, 0.18), transparent 0 32%),
+        radial-gradient(circle at 90% 0%, rgba(167, 139, 250, 0.16), transparent 0 28%),
+        linear-gradient(180deg, #06111d 0%, #0a1626 45%, #07111f 100%);
+      line-height: 1.55;
     }
-    .box {
-      max-width: 720px;
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: rgba(6, 17, 29, 0.68);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .topbar-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background:
+        linear-gradient(135deg, rgba(125, 211, 252, 0.95), rgba(167, 139, 250, 0.95));
+      box-shadow: 0 10px 24px rgba(125, 211, 252, 0.24);
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: 10px;
+      background: rgba(7, 17, 31, 0.2);
+      border: 1px solid rgba(255,255,255,0.34);
+    }
+
+    .brand span {
+      font-size: 1rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 20px;
+      font: inherit;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      cursor: pointer;
+      transition: transform 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       text-align: center;
     }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 16px;
+
+    .btn:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
     }
-    p {
-      font-size: 20px;
-      color: #cbd5e1;
-      margin-bottom: 24px;
+
+    .btn-primary {
+      color: #08101b;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 18px 36px rgba(125, 211, 252, 0.18);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+    }
+
+    .hero {
+      padding: 64px 0 34px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: #dff7ff;
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2.3rem, 5.8vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      max-width: 10.8ch;
+    }
+
+    .hero p.lead {
+      margin: 0 0 24px;
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 0 0 18px;
+    }
+
+    .microproof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .preview-shell {
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+      min-height: 540px;
+      background:
+        radial-gradient(circle at top right, rgba(52, 211, 153, 0.14), transparent 0 28%),
+        radial-gradient(circle at bottom left, rgba(125, 211, 252, 0.12), transparent 0 30%),
+        rgba(255,255,255,0.05);
+    }
+
+    .float-chip {
+      position: absolute;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #ebfbff;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .chip-1 {
+      top: 22px;
+      right: 24px;
+    }
+
+    .chip-2 {
+      left: 18px;
+      bottom: 22px;
+    }
+
+    .preview-window {
+      position: absolute;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: #ffffff;
+      color: #102033;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.28);
+    }
+
+    .preview-window.top {
+      width: 76%;
+      left: 7%;
+      top: 8%;
+      transform: rotate(-4deg);
+    }
+
+    .preview-window.bottom {
+      width: 78%;
+      right: 5%;
+      bottom: 7%;
+      transform: rotate(5deg);
+    }
+
+    .window-bar {
+      height: 42px;
+      background: #edf3fb;
+      border-bottom: 1px solid #d9e4f0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 14px;
+    }
+
+    .window-bar span {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #c8d4e2;
+      display: inline-block;
+    }
+
+    .sheet-area,
+    .doc-area {
+      padding: 16px;
+      min-height: 250px;
+      background:
+        linear-gradient(#edf3f9 1px, transparent 1px),
+        linear-gradient(90deg, #edf3f9 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+
+    .mini-panel {
+      background: white;
+      border: 1px solid #d9e4f0;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 10px 24px rgba(16, 32, 51, 0.08);
+    }
+
+    .mini-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      gap: 12px;
+    }
+
+    .mini-title strong {
+      font-size: 0.98rem;
+      color: #102033;
+    }
+
+    .pill {
+      font-size: 0.72rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eaf6ff;
+      color: #04638b;
+      font-weight: 800;
+    }
+
+    .bar {
+      height: 12px;
+      border-radius: 999px;
+      background: #e4edf6;
+      margin-bottom: 10px;
+    }
+
+    .bar.short { width: 42%; }
+    .bar.mid { width: 66%; }
+    .bar.long { width: 100%; }
+
+    .bar.green { background: #d9f8ea; }
+    .bar.blue { background: #d8f0ff; }
+    .bar.purple { background: #ece5ff; }
+
+    .doc-card {
+      background: white;
+      border: 1px solid #d9e4f0;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 24px rgba(16, 32, 51, 0.08);
+    }
+
+    .doc-card h3 {
+      margin: 0 0 12px;
+      font-size: 1rem;
+      color: #102033;
+    }
+
+    .doc-line {
+      height: 10px;
+      border-radius: 999px;
+      background: #e5edf7;
+      margin-bottom: 10px;
+    }
+
+    .doc-line.tiny { width: 24%; }
+    .doc-line.small { width: 40%; }
+    .doc-line.medium { width: 64%; }
+    .doc-line.large { width: 100%; }
+
+    section {
+      padding: 36px 0;
+    }
+
+    .section-head {
+      margin-bottom: 22px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 64ch;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .feature,
+    .benefit,
+    .price-card,
+    .faq-item,
+    .compat-card,
+    .final-cta {
+      padding: 24px;
+    }
+
+    .feature h3,
+    .benefit h3,
+    .faq-item h3,
+    .compat-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+      letter-spacing: -0.02em;
+    }
+
+    .feature p,
+    .benefit p,
+    .faq-item p,
+    .compat-card p,
+    .compat-card li {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .icon-badge {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      font-weight: 900;
+      color: #051018;
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+      box-shadow: 0 12px 24px rgba(125, 211, 252, 0.16);
+    }
+
+    .benefit-list,
+    .price-list,
+    .compat-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .benefit-list li,
+    .price-list li,
+    .compat-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .check {
+      color: #baf7d2;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .price-wrap {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      margin: 12px 0 18px;
+    }
+
+    .price-number {
+      font-size: 3.4rem;
+      line-height: 0.95;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+    }
+
+    .price-meta {
+      color: var(--muted);
+      padding-bottom: 8px;
+      font-size: 0.96rem;
+    }
+
+    .notice {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .center-cta {
+      text-align: center;
+    }
+
+    .center-cta .cta-row {
+      justify-content: center;
+    }
+
+    .final-cta {
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(125,211,252,0.14), transparent 0 26%),
+        radial-gradient(circle at bottom right, rgba(167,139,250,0.12), transparent 0 30%),
+        rgba(255,255,255,0.05);
+    }
+
+    .final-cta h2 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 4.4vw, 3rem);
+      letter-spacing: -0.05em;
+    }
+
+    .final-cta p {
+      max-width: 58ch;
+      margin: 0 auto 20px;
+      color: var(--muted);
+    }
+
+    .footer {
+      padding: 28px 0 52px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 18px;
+    }
+
+    .small-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .small-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      .preview-shell {
+        min-height: 500px;
+      }
+
+      .nav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(var(--max), calc(100% - 20px));
+      }
+
+      .topbar-inner {
+        min-height: 64px;
+      }
+
+      .hero p.lead {
+        font-size: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .preview-shell {
+        min-height: 430px;
+        padding: 14px;
+      }
+
+      .preview-window.top {
+        width: 86%;
+        left: 2%;
+        top: 8%;
+      }
+
+      .preview-window.bottom {
+        width: 86%;
+        right: 2%;
+        bottom: 8%;
+      }
+
+      .float-chip {
+        font-size: 0.78rem;
+        padding: 8px 10px;
+      }
+
+      .chip-1 {
+        top: 12px;
+        right: 12px;
+      }
+
+      .chip-2 {
+        left: 10px;
+        bottom: 12px;
+      }
+
+      .feature,
+      .benefit,
+      .price-card,
+      .faq-item,
+      .compat-card,
+      .final-cta {
+        padding: 20px;
+      }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Client Ready Kit",
+    "description":"Freelance starter pack with a pricing calculator, quote builder, invoice template, proposal template, and onboarding checklist.",
+    "brand":{
+      "@type":"Brand",
+      "name":"Client Ready Kit"
+    },
+    "category":"Digital Product",
+    "offers":{
+      "@type":"Offer",
+      "priceCurrency":"USD",
+      "price":"12",
+      "availability":"https://schema.org/InStock",
+      "url":"https://clientreadykit.com/"
+    }
+  }
+  </script>
 </head>
 <body>
-  <div class="box">
-    <h1>Client Ready Kit</h1>
-    <p>Price projects faster, send cleaner proposals, and invoice professionally.</p>
-  </div>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top" aria-label="Client Ready Kit home">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span>Client Ready Kit</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#included">What's included</a>
+        <a href="#benefits">Why it helps</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <button class="btn btn-secondary buy-button" type="button">
+        Buy for $12
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Freelance Starter Pack for Pricing, Quotes, Invoices & Proposals</div>
+          <h1>Look client-ready from day one.</h1>
+          <p class="lead">
+            Client Ready Kit helps freelancers price projects faster, send cleaner proposals,
+            create simple quotes, and invoice professionally without building everything from scratch.
+          </p>
+
+          <div class="cta-row">
+            <button class="btn btn-primary buy-button" type="button">Get Client Ready Kit</button>
+            <a class="btn btn-secondary" href="#included">See what's included</a>
+          </div>
+
+          <div class="microproof">
+            <span>One-time purchase</span>
+            <span>Instant digital download</span>
+            <span>Built for freelancers</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="card preview-shell">
+            <div class="float-chip chip-1">Pricing + Quotes + Invoices</div>
+            <div class="float-chip chip-2">Proposal template included</div>
+
+            <div class="preview-window top" aria-hidden="true">
+              <div class="window-bar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="sheet-area">
+                <div class="mini-panel">
+                  <div class="mini-title">
+                    <strong>Pricing Calculator</strong>
+                    <div class="pill">Excel</div>
+                  </div>
+                  <div class="bar long blue"></div>
+                  <div class="bar mid"></div>
+                  <div class="bar short"></div>
+                  <div class="bar long green"></div>
+                  <div class="bar mid"></div>
+                  <div class="bar long purple"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="preview-window bottom" aria-hidden="true">
+              <div class="window-bar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="doc-area">
+                <div class="doc-card">
+                  <h3>Freelance Proposal Template</h3>
+                  <div class="doc-line medium"></div>
+                  <div class="doc-line large"></div>
+                  <div class="doc-line large"></div>
+                  <div class="doc-line small"></div>
+                  <div class="doc-line tiny"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="included">
+      <div class="container">
+        <div class="section-head">
+          <h2>Everything you need to stop improvising your client admin.</h2>
+          <p>
+            Instead of piecing together random templates from the internet, get one clean starter pack
+            that helps you price work, quote projects, invoice clients, and send a polished proposal.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card feature">
+            <div class="icon-badge">01</div>
+            <h3>Pricing Calculator</h3>
+            <p>
+              Estimate sustainable rates and project pricing faster, so you stop guessing what to charge.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <div class="icon-badge">02</div>
+            <h3>Quote Builder</h3>
+            <p>
+              Put together cleaner project quotes with a structure that feels professional and easy to send.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <div class="icon-badge">03</div>
+            <h3>Invoice Template</h3>
+            <p>
+              Send simple, presentable invoices without formatting documents from scratch every time.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <div class="icon-badge">04</div>
+            <h3>Proposal Template</h3>
+            <p>
+              Use a ready-made proposal document to present scope, pricing, and next steps more confidently.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <div class="icon-badge">05</div>
+            <h3>Onboarding Checklist</h3>
+            <p>
+              Keep your first client steps organized so projects start more smoothly and feel more professional.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <div class="icon-badge">06</div>
+            <h3>One Download, Reusable Files</h3>
+            <p>
+              Buy once, then reuse the files across future client projects as often as you want.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <div class="container">
+        <div class="section-head">
+          <h2>Made for freelancers who want to look legit faster.</h2>
+          <p>
+            Client Ready Kit is not a giant complicated business system. It’s a practical starter pack
+            for freelancers who want cleaner client-facing files without wasting hours on setup.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card benefit">
+            <h3>What this helps you do</h3>
+            <ul class="benefit-list">
+              <li><span class="check">✓</span><span>Price work with more confidence</span></li>
+              <li><span class="check">✓</span><span>Create clearer quotes and invoices</span></li>
+              <li><span class="check">✓</span><span>Use a proposal template instead of starting from zero</span></li>
+              <li><span class="check">✓</span><span>Look more organized to new clients</span></li>
+              <li><span class="check">✓</span><span>Save time on repeat admin tasks</span></li>
+            </ul>
+          </article>
+
+          <article class="card benefit">
+            <h3>Best for</h3>
+            <ul class="benefit-list">
+              <li><span class="check">✓</span><span>New freelancers and solo service providers</span></li>
+              <li><span class="check">✓</span><span>Designers, developers, writers, marketers, editors, consultants</span></li>
+              <li><span class="check">✓</span><span>Anyone who has clients but no clean workflow yet</span></li>
+              <li><span class="check">✓</span><span>Freelancers who want a simple toolkit, not a bloated system</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="container">
+        <div class="grid-2">
+          <article class="card price-card">
+            <div class="section-head" style="margin-bottom: 12px;">
+              <h2>Simple launch pricing.</h2>
+              <p>
+                Start with the full pack now and reuse it across future projects.
+              </p>
+            </div>
+
+            <div class="price-wrap">
+              <div class="price-number">$12</div>
+              <div class="price-meta">one-time payment</div>
+            </div>
+
+            <ul class="price-list">
+              <li><span class="check">✓</span><span>Pricing calculator workbook</span></li>
+              <li><span class="check">✓</span><span>Quote builder</span></li>
+              <li><span class="check">✓</span><span>Invoice template</span></li>
+              <li><span class="check">✓</span><span>Proposal template</span></li>
+              <li><span class="check">✓</span><span>Client onboarding checklist</span></li>
+            </ul>
+
+            <div class="cta-row" style="margin-top: 22px;">
+              <button class="btn btn-primary buy-button" type="button">Buy Client Ready Kit</button>
+            </div>
+
+            <div class="notice">
+              This is a digital download. No subscription, no recurring charges.
+            </div>
+          </article>
+
+          <article class="card compat-card">
+            <h3>Compatibility</h3>
+            <ul class="compat-list">
+              <li><span class="check">•</span><span>Includes an Excel workbook (.xlsx)</span></li>
+              <li><span class="check">•</span><span>Includes a Word proposal template (.docx)</span></li>
+              <li><span class="check">•</span><span>Works best in Microsoft Excel and Microsoft Word</span></li>
+              <li><span class="check">•</span><span>Compatible software may work, but formulas or formatting can vary</span></li>
+            </ul>
+
+            <div class="notice">
+              A good fit if you want practical files you can open, edit, and reuse — not another complicated app to learn.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="center-cta">
+      <div class="container">
+        <div class="card final-cta">
+          <h2>Get organized before your next client project.</h2>
+          <p>
+            Stop building invoices, proposals, and pricing sheets from scratch. Start with a clean freelance starter pack instead.
+          </p>
+          <div class="cta-row">
+            <button class="btn btn-primary buy-button" type="button">Get the Starter Pack</button>
+            <a class="btn btn-secondary" href="#faq">Read FAQ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p>
+            Quick answers for the most common questions before you buy.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card faq-item">
+            <h3>What exactly do I get?</h3>
+            <p>
+              You get a downloadable freelance starter pack with a pricing calculator, quote builder,
+              invoice template, proposal template, and onboarding checklist.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Is this a subscription?</h3>
+            <p>
+              No. It’s a one-time purchase digital download.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Do I need Microsoft Office?</h3>
+            <p>
+              The files work best in Microsoft Excel and Word. Compatible apps may open them too,
+              but formulas or formatting can vary.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Who is this best for?</h3>
+            <p>
+              New freelancers, solo consultants, and service providers who want clean client-facing files
+              without making them from scratch.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Can I reuse it for future projects?</h3>
+            <p>
+              Yes. The pack is meant to be reused across multiple client projects.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Will more templates be added later?</h3>
+            <p>
+              Possibly. This launch version is intentionally simple and focused on the core client workflow.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Client Ready Kit</div>
+      <div class="small-links">
+        <a href="#included">What's included</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/checkout.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function openCheckout() {
+      if (window.LemonSqueezy && window.CHECKOUT_URL) {
+        window.LemonSqueezy.Url.Open(window.CHECKOUT_URL);
+      } else if (window.CHECKOUT_URL) {
+        window.location.href = window.CHECKOUT_URL;
+      } else {
+        alert("Checkout link not found.");
+      }
+    }
+
+    document.querySelectorAll(".buy-button").forEach((button) => {
+      button.addEventListener("click", function () {
+        openCheckout();
+      });
+    });
+  </script>
 </body>
 </html>
