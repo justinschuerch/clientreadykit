@@ -1,1 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Freelance Proposal Template | How to Write a Clear Client Proposal</title>
+  <meta
+    name="description"
+    content="Learn how to structure a freelance proposal, what to include, common proposal mistakes to avoid, and how to turn your quote into a cleaner client-facing document."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://clientreadykit.com/freelance-proposal-template/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Freelance Proposal Template | How to Write a Clear Client Proposal" />
+  <meta
+    property="og:description"
+    content="A practical guide to structuring freelance proposals, clarifying scope, and sending client-ready project documents with more confidence."
+  />
+  <meta property="og:url" content="https://clientreadykit.com/freelance-proposal-template/" />
+  <meta property="og:image" content="https://clientreadykit.com/client-ready-kit-thumbnail-1600x1200.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Freelance Proposal Template | How to Write a Clear Client Proposal" />
+  <meta
+    name="twitter:description"
+    content="A practical guide to structuring freelance proposals, clarifying scope, and sending client-ready project documents with more confidence."
+  />
+  <meta name="twitter:image" content="https://clientreadykit.com/client-ready-kit-thumbnail-1600x1200.png" />
+
+  <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0d1a2d;
+      --card: rgba(255, 255, 255, 0.06);
+      --text: #f8fbff;
+      --muted: #b8c4d8;
+      --line: rgba(255, 255, 255, 0.12);
+      --accent: #7dd3fc;
+      --accent-2: #a78bfa;
+      --accent-3: #34d399;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(125, 211, 252, 0.18), transparent 0 32%),
+        radial-gradient(circle at 90% 0%, rgba(167, 139, 250, 0.16), transparent 0 28%),
+        linear-gradient(180deg, #06111d 0%, #0a1626 45%, #07111f 100%);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: rgba(6, 17, 29, 0.68);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .topbar-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(125, 211, 252, 0.95), rgba(167, 139, 250, 0.95));
+      box-shadow: 0 10px 24px rgba(125, 211, 252, 0.24);
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: 10px;
+      background: rgba(7, 17, 31, 0.2);
+      border: 1px solid rgba(255,255,255,0.34);
+    }
+
+    .brand span {
+      font-size: 1rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 20px;
+      font: inherit;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      cursor: pointer;
+      transition: transform 0.2s ease, filter 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
+    }
+
+    .btn-primary {
+      color: #08101b;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 18px 36px rgba(125, 211, 252, 0.18);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+    }
+
+    .hero {
+      padding: 68px 0 34px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: #dff7ff;
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 4.1vw, 3.7rem);
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+      max-width: 13ch;
+      text-wrap: balance;
+    }
+
+    .hero p.lead {
+      margin: 0 0 22px;
+      font-size: 1.06rem;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 0 0 18px;
+    }
+
+    .microproof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-image-wrap {
+      padding: 12px;
+      background:
+        radial-gradient(circle at top right, rgba(52, 211, 153, 0.14), transparent 0 28%),
+        radial-gradient(circle at bottom left, rgba(125, 211, 252, 0.12), transparent 0 30%),
+        rgba(255,255,255,0.05);
+      transform: translateY(-14px);
+    }
+
+    .hero-image {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.28);
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-head {
+      margin-bottom: 22px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 3.8vw, 2.6rem);
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 66ch;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .article-card,
+    .tip-card,
+    .faq-item,
+    .cta-card {
+      padding: 24px;
+    }
+
+    .article-card h3,
+    .tip-card h3,
+    .faq-item h3 {
+      margin: 0 0 10px;
+      font-size: 1.06rem;
+      letter-spacing: -0.02em;
+    }
+
+    .article-card p,
+    .tip-card p,
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--muted);
+    }
+
+    .check {
+      color: #baf7d2;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .number-badge {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      font-weight: 900;
+      color: #051018;
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+      box-shadow: 0 12px 24px rgba(125, 211, 252, 0.16);
+    }
+
+    .callout {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: #051018;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+
+    .step h3 {
+      margin: 0 0 6px;
+      font-size: 1.04rem;
+      letter-spacing: -0.02em;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .cta-card {
+      text-align: center;
+      background:
+        radial-gradient(circle at top left, rgba(125,211,252,0.14), transparent 0 26%),
+        radial-gradient(circle at bottom right, rgba(167,139,250,0.12), transparent 0 30%),
+        rgba(255,255,255,0.05);
+    }
+
+    .cta-card h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      letter-spacing: -0.05em;
+    }
+
+    .cta-card p {
+      margin: 0 auto 18px;
+      color: var(--muted);
+      max-width: 58ch;
+    }
+
+    .footer {
+      padding: 28px 0 52px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 18px;
+    }
+
+    .small-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .small-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero-image-wrap {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(var(--max), calc(100% - 20px));
+      }
+
+      .topbar-inner {
+        min-height: 64px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      h1 {
+        max-width: none;
+        font-size: clamp(2.1rem, 10vw, 3.2rem);
+      }
+
+      .article-card,
+      .tip-card,
+      .faq-item,
+      .cta-card {
+        padding: 20px;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+      }
+
+      .step-num {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Freelance Proposal Template | How to Write a Clear Client Proposal",
+    "description":"A practical guide to structuring freelance proposals, clarifying scope, and sending client-ready project documents with more confidence.",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://clientreadykit.com/freelance-proposal-template/"
+    },
+    "author":{
+      "@type":"Organization",
+      "name":"Client Ready Kit"
+    },
+    "publisher":{
+      "@type":"Organization",
+      "name":"Client Ready Kit"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="/" aria-label="Client Ready Kit home">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span>Client Ready Kit</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#included">What to include</a>
+        <a href="#mistakes">Common mistakes</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <button class="btn btn-secondary buy-button" type="button">
+        Buy for $12
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Freelance Proposal Template Guide</div>
+          <h1>How to write a freelance proposal that feels clear, structured, and easy to approve.</h1>
+          <p class="lead">
+            A good freelance proposal should make the project feel real, organized, and low-friction. It should
+            explain the scope, timeline, pricing, and next steps clearly enough that the client knows exactly what they are saying yes to.
+          </p>
+
+          <div class="cta-row">
+            <button class="btn btn-primary buy-button" type="button">Get Client Ready Kit</button>
+            <a class="btn btn-secondary" href="#included">See what to include</a>
+          </div>
+
+          <div class="microproof">
+            <span>Useful guide</span>
+            <span>Cleaner proposals</span>
+            <span>Reusable toolkit</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="card hero-image-wrap">
+            <img
+              class="hero-image"
+              src="/client-ready-kit-thumbnail-1600x1200.png"
+              alt="Client Ready Kit proposal template and workbook preview"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="included">
+      <div class="container">
+        <div class="section-head">
+          <h2>What a freelance proposal template should include</h2>
+          <p>
+            A proposal is more than a price. It is the document that helps the client understand the work,
+            trust the process, and feel confident approving the project.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card article-card">
+            <div class="number-badge">01</div>
+            <h3>Project summary</h3>
+            <p>
+              Start with a short explanation of what the client needs and what the proposal covers.
+            </p>
+          </article>
+
+          <article class="card article-card">
+            <div class="number-badge">02</div>
+            <h3>Scope of work</h3>
+            <p>
+              Clearly list what is included so the project feels concrete and expectations are easier to manage.
+            </p>
+          </article>
+
+          <article class="card article-card">
+            <div class="number-badge">03</div>
+            <h3>Timeline</h3>
+            <p>
+              A simple timeline helps the client picture how the project moves from kickoff to delivery.
+            </p>
+          </article>
+
+          <article class="card article-card">
+            <div class="number-badge">04</div>
+            <h3>Pricing / investment</h3>
+            <p>
+              Show the project fee clearly and make it easy to understand how payment works.
+            </p>
+          </article>
+
+          <article class="card article-card">
+            <div class="number-badge">05</div>
+            <h3>Revision and scope boundaries</h3>
+            <p>
+              Define what is included and what would count as additional work, changes, or rush requests.
+            </p>
+          </article>
+
+          <article class="card article-card">
+            <div class="number-badge">06</div>
+            <h3>Approval path</h3>
+            <p>
+              End with a simple next step so the client knows how to approve and move forward.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2">
+        <article class="card article-card">
+          <h3>What makes a proposal strong?</h3>
+          <ul class="checklist">
+            <li><span class="check">✓</span><span>Clear scope</span></li>
+            <li><span class="check">✓</span><span>Simple timeline</span></li>
+            <li><span class="check">✓</span><span>Readable pricing</span></li>
+            <li><span class="check">✓</span><span>Professional structure</span></li>
+            <li><span class="check">✓</span><span>Low-friction approval</span></li>
+          </ul>
+          <div class="callout">
+            A strong proposal reduces uncertainty. It helps the client feel like the project is already organized.
+          </div>
+        </article>
+
+        <article class="card article-card">
+          <h3>Internal pricing first, proposal second</h3>
+          <p>
+            The cleanest workflow is to calculate and structure your numbers internally first, then move the final
+            scope and pricing into the client-facing proposal document.
+          </p>
+          <div class="callout">
+            This is exactly why Client Ready Kit separates the internal workbook from the Word proposal template.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="mistakes">
+      <div class="container">
+        <div class="section-head">
+          <h2>Common freelance proposal mistakes</h2>
+          <p>
+            Most weak proposals are not too short or too long — they are just unclear about the work, the boundaries, or the next step.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card tip-card">
+            <h3>Too vague about scope</h3>
+            <p>
+              If the client cannot clearly see what is included, the proposal creates uncertainty instead of confidence.
+            </p>
+          </article>
+
+          <article class="card tip-card">
+            <h3>Too much internal detail</h3>
+            <p>
+              The proposal should feel clear and polished. Clients do not need every internal calculation or worksheet detail.
+            </p>
+          </article>
+
+          <article class="card tip-card">
+            <h3>No revision boundaries</h3>
+            <p>
+              If the document does not explain revision limits or scope edges, misunderstandings become much more likely later.
+            </p>
+          </article>
+
+          <article class="card tip-card">
+            <h3>No clear approval step</h3>
+            <p>
+              A proposal should not end vaguely. It should tell the client exactly how to move forward.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow">
+      <div class="container">
+        <div class="section-head">
+          <h2>A simple freelance proposal workflow</h2>
+          <p>
+            Better proposals usually come from a better underlying process, not just a nicer-looking document.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h3>Price the work internally</h3>
+              <p>
+                Start with your calculator and quote worksheet so the numbers make sense before they ever appear in the proposal.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h3>Clarify scope and deliverables</h3>
+              <p>
+                Decide what is included, what is not included, and what the project is actually meant to deliver.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h3>Move the final numbers into the proposal</h3>
+              <p>
+                Copy the final scope, timeline, and pricing into the proposal template so the document feels clean and client-ready.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-num">4</div>
+            <div>
+              <h3>Get approval, then invoice</h3>
+              <p>
+                Once the proposal is accepted, use your invoice template and continue the project with the same organized workflow.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card cta-card">
+          <h2>Want the actual proposal template, quote builder, and pricing workflow?</h2>
+          <p>
+            Client Ready Kit gives you the internal workbook for pricing and quotes plus the client-facing Word proposal template, so you can stop building proposals from scratch.
+          </p>
+          <div class="cta-row" style="justify-content:center;">
+            <button class="btn btn-primary buy-button" type="button">Get Client Ready Kit</button>
+            <a class="btn btn-secondary" href="/">Back to homepage</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p>Quick answers around freelance proposals and client-facing project documents.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card faq-item">
+            <h3>What is the difference between a quote and a proposal?</h3>
+            <p>
+              A quote is usually more focused on price and scope. A proposal often adds context, goals, timeline, and approval language.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Should a proposal include pricing?</h3>
+            <p>
+              Usually yes. A proposal often works best when it includes both the scope and the investment so the client can approve the full picture.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Should I send my spreadsheet to the client?</h3>
+            <p>
+              Usually no. The internal workbook is for pricing and quote structure. The client should generally receive the cleaned proposal document instead.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>How detailed should a proposal be?</h3>
+            <p>
+              Detailed enough to remove confusion, but not so detailed that it becomes bloated or hard to approve.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Does this page include a live proposal generator?</h3>
+            <p>
+              No. This page explains the structure and workflow. The actual reusable Word proposal template is included inside Client Ready Kit.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>What does Client Ready Kit include?</h3>
+            <p>
+              It includes an Excel workbook for pricing, quotes, invoicing, and onboarding, plus a Word proposal template for client-facing project documents.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Client Ready Kit</div>
+      <div class="small-links">
+        <a href="/">Home</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/checkout.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function openCheckout() {
+      if (window.LemonSqueezy && window.CHECKOUT_URL) {
+        window.LemonSqueezy.Url.Open(window.CHECKOUT_URL);
+      } else if (window.CHECKOUT_URL) {
+        window.location.href = window.CHECKOUT_URL;
+      } else {
+        alert("Checkout link not found.");
+      }
+    }
+
+    document.querySelectorAll(".buy-button").forEach((button) => {
+      button.addEventListener("click", function () {
+        openCheckout();
+      });
+    });
+  </script>
+</body>
+</html>
