@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://clientreadykit.com/sitemap.xml
