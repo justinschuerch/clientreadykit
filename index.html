@@ -302,14 +302,16 @@
     .price-card,
     .faq-item,
     .compat-card,
-    .final-cta {
+    .final-cta,
+    .guide-card {
       padding: 24px;
     }
 
     .feature h3,
     .benefit h3,
     .faq-item h3,
-    .compat-card h3 {
+    .compat-card h3,
+    .guide-card h3 {
       margin: 0 0 10px;
       font-size: 1.08rem;
       letter-spacing: -0.02em;
@@ -319,7 +321,8 @@
     .benefit p,
     .faq-item p,
     .compat-card p,
-    .compat-card li {
+    .compat-card li,
+    .guide-card p {
       margin: 0;
       color: var(--muted);
     }
@@ -389,6 +392,50 @@
       background: rgba(255,255,255,0.04);
       color: var(--muted);
       font-size: 0.95rem;
+    }
+
+    .guide-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(125, 211, 252, 0.26);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .guide-card .guide-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      color: #dff7ff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      margin-bottom: 14px;
+    }
+
+    .guide-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      font-weight: 800;
+      color: #e9f5ff;
+    }
+
+    .guide-link span {
+      transition: transform 0.2s ease;
+    }
+
+    .guide-card:hover .guide-link span {
+      transform: translateX(3px);
     }
 
     .center-cta {
@@ -465,6 +512,10 @@
       h1 {
         max-width: 13ch;
       }
+
+      .hero-visual {
+        transform: none;
+      }
     }
 
     @media (max-width: 640px) {
@@ -493,7 +544,8 @@
       .price-card,
       .faq-item,
       .compat-card,
-      .final-cta {
+      .final-cta,
+      .guide-card {
         padding: 20px;
       }
 
@@ -536,6 +588,7 @@
       <nav class="nav" aria-label="Primary">
         <a href="#included">What's included</a>
         <a href="#benefits">Why it helps</a>
+        <a href="#guides">Guides</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -678,6 +731,56 @@
       </div>
     </section>
 
+    <section id="guides">
+      <div class="container">
+        <div class="section-head">
+          <h2>Helpful guides for freelancers</h2>
+          <p>
+            Explore the practical guides behind the toolkit. Each one explains part of the workflow —
+            from pricing your work to sending cleaner quotes, invoices, and proposals.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <a class="card guide-card" href="/freelance-pricing-calculator/">
+            <div class="guide-kicker">Guide 01</div>
+            <h3>Freelance Pricing Calculator</h3>
+            <p>
+              Learn how to calculate your rate, set a pricing floor, and price projects with more confidence.
+            </p>
+            <div class="guide-link">Read guide <span>→</span></div>
+          </a>
+
+          <a class="card guide-card" href="/freelance-quote-template/">
+            <div class="guide-kicker">Guide 02</div>
+            <h3>Freelance Quote Template</h3>
+            <p>
+              Learn how to structure a quote that feels clear, professional, and easy for clients to approve.
+            </p>
+            <div class="guide-link">Read guide <span>→</span></div>
+          </a>
+
+          <a class="card guide-card" href="/freelance-invoice-template/">
+            <div class="guide-kicker">Guide 03</div>
+            <h3>Freelance Invoice Template</h3>
+            <p>
+              Learn what to include in a freelance invoice and how to make billing smoother and more professional.
+            </p>
+            <div class="guide-link">Read guide <span>→</span></div>
+          </a>
+
+          <a class="card guide-card" href="/freelance-proposal-template/">
+            <div class="guide-kicker">Guide 04</div>
+            <h3>Freelance Proposal Template</h3>
+            <p>
+              Learn how to turn your scope, pricing, and timeline into a clean client-facing proposal document.
+            </p>
+            <div class="guide-link">Read guide <span>→</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section id="pricing">
       <div class="container">
         <div class="grid-2">
@@ -807,6 +910,7 @@
       <div>© <span id="year"></span> Client Ready Kit</div>
       <div class="small-links">
         <a href="#included">What's included</a>
+        <a href="#guides">Guides</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
       </div>
