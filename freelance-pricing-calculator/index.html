@@ -1,1 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Freelance Pricing Calculator | How to Set Your Rate and Price Projects</title>
+  <meta
+    name="description"
+    content="Learn how to calculate your freelance rate, set a pricing floor, and quote projects more confidently. Includes a practical workflow for pricing, quotes, and proposals."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://clientreadykit.com/freelance-pricing-calculator/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Freelance Pricing Calculator | How to Set Your Rate and Price Projects" />
+  <meta
+    property="og:description"
+    content="A practical guide to calculating your freelance rate, pricing projects, and quoting clients with more confidence."
+  />
+  <meta property="og:url" content="https://clientreadykit.com/freelance-pricing-calculator/" />
+  <meta property="og:image" content="https://clientreadykit.com/client-ready-kit-thumbnail-1600x1200.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Freelance Pricing Calculator | How to Set Your Rate and Price Projects" />
+  <meta
+    name="twitter:description"
+    content="A practical guide to calculating your freelance rate, pricing projects, and quoting clients with more confidence."
+  />
+  <meta name="twitter:image" content="https://clientreadykit.com/client-ready-kit-thumbnail-1600x1200.png" />
+
+  <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0d1a2d;
+      --card: rgba(255, 255, 255, 0.06);
+      --text: #f8fbff;
+      --muted: #b8c4d8;
+      --line: rgba(255, 255, 255, 0.12);
+      --accent: #7dd3fc;
+      --accent-2: #a78bfa;
+      --accent-3: #34d399;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(125, 211, 252, 0.18), transparent 0 32%),
+        radial-gradient(circle at 90% 0%, rgba(167, 139, 250, 0.16), transparent 0 28%),
+        linear-gradient(180deg, #06111d 0%, #0a1626 45%, #07111f 100%);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: rgba(6, 17, 29, 0.68);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .topbar-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(125, 211, 252, 0.95), rgba(167, 139, 250, 0.95));
+      box-shadow: 0 10px 24px rgba(125, 211, 252, 0.24);
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: 10px;
+      background: rgba(7, 17, 31, 0.2);
+      border: 1px solid rgba(255,255,255,0.34);
+    }
+
+    .brand span {
+      font-size: 1rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 20px;
+      font: inherit;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      cursor: pointer;
+      transition: transform 0.2s ease, filter 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
+    }
+
+    .btn-primary {
+      color: #08101b;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 18px 36px rgba(125, 211, 252, 0.18);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+    }
+
+    .hero {
+      padding: 68px 0 34px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+      gap: 30px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: #dff7ff;
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.2rem, 4.6vw, 4.3rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      max-width: 12ch;
+      text-wrap: balance;
+    }
+
+    .hero p.lead {
+      margin: 0 0 22px;
+      font-size: 1.06rem;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 0 0 18px;
+    }
+
+    .microproof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-image-wrap {
+      padding: 14px;
+      background:
+        radial-gradient(circle at top right, rgba(52, 211, 153, 0.14), transparent 0 28%),
+        radial-gradient(circle at bottom left, rgba(125, 211, 252, 0.12), transparent 0 30%),
+        rgba(255,255,255,0.05);
+      transform: translateY(-8px);
+    }
+
+    .hero-image {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.28);
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-head {
+      margin-bottom: 22px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 3.8vw, 2.6rem);
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 66ch;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .article-card,
+    .tip-card,
+    .faq-item,
+    .cta-card {
+      padding: 24px;
+    }
+
+    .article-card h3,
+    .tip-card h3,
+    .faq-item h3 {
+      margin: 0 0 10px;
+      font-size: 1.06rem;
+      letter-spacing: -0.02em;
+    }
+
+    .article-card p,
+    .tip-card p,
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--muted);
+    }
+
+    .check {
+      color: #baf7d2;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .number-badge {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      font-weight: 900;
+      color: #051018;
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+      box-shadow: 0 12px 24px rgba(125, 211, 252, 0.16);
+    }
+
+    .formula-box {
+      padding: 24px;
+      font-size: 1.12rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: #ebf8ff;
+    }
+
+    .callout {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: #051018;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+
+    .step h3 {
+      margin: 0 0 6px;
+      font-size: 1.04rem;
+      letter-spacing: -0.02em;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .cta-card {
+      text-align: center;
+      background:
+        radial-gradient(circle at top left, rgba(125,211,252,0.14), transparent 0 26%),
+        radial-gradient(circle at bottom right, rgba(167,139,250,0.12), transparent 0 30%),
+        rgba(255,255,255,0.05);
+    }
+
+    .cta-card h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      letter-spacing: -0.05em;
+    }
+
+    .cta-card p {
+      margin: 0 auto 18px;
+      color: var(--muted);
+      max-width: 58ch;
+    }
+
+    .footer {
+      padding: 28px 0 52px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 18px;
+    }
+
+    .small-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .small-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero-image-wrap {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(var(--max), calc(100% - 20px));
+      }
+
+      .topbar-inner {
+        min-height: 64px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      h1 {
+        max-width: none;
+        font-size: clamp(2.1rem, 10vw, 3.2rem);
+      }
+
+      .article-card,
+      .tip-card,
+      .faq-item,
+      .cta-card {
+        padding: 20px;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+      }
+
+      .step-num {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Freelance Pricing Calculator | How to Set Your Rate and Price Projects",
+    "description":"A practical guide to calculating your freelance rate, pricing projects, and quoting clients with more confidence.",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://clientreadykit.com/freelance-pricing-calculator/"
+    },
+    "author":{
+      "@type":"Organization",
+      "name":"Client Ready Kit"
+    },
+    "publisher":{
+      "@type":"Organization",
+      "name":"Client Ready Kit"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="/" aria-label="Client Ready Kit home">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span>Client Ready Kit</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#mistakes">Common mistakes</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <button class="btn btn-secondary buy-button" type="button">
+        Buy for $12
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Freelance Pricing Calculator Guide</div>
+          <h1>How to calculate your freelance rate and price projects with more confidence.</h1>
+          <p class="lead">
+            A freelance pricing calculator helps you stop guessing what to charge. The goal is not to
+            find one magic number — it’s to set a realistic pricing floor, adjust for project value,
+            and turn your numbers into cleaner quotes and proposals.
+          </p>
+
+          <div class="cta-row">
+            <button class="btn btn-primary buy-button" type="button">Get Client Ready Kit</button>
+            <a class="btn btn-secondary" href="#how">Learn the pricing logic</a>
+          </div>
+
+          <div class="microproof">
+            <span>Useful guide</span>
+            <span>Real workflow</span>
+            <span>Full toolkit available</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="card hero-image-wrap">
+            <img
+              class="hero-image"
+              src="/client-ready-kit-thumbnail-1600x1200.png"
+              alt="Client Ready Kit pricing calculator, quote builder, and proposal template preview"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="container">
+        <div class="section-head">
+          <h2>What a freelance pricing calculator should actually help you do.</h2>
+          <p>
+            A good pricing calculator is not just about math. It should help you understand your minimum
+            viable rate, show how many billable hours you really have, and give you a pricing baseline
+            before you send anything client-facing.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card article-card">
+            <div class="number-badge">01</div>
+            <h3>Set a pricing floor</h3>
+            <p>
+              Your rate should cover your income goal, business costs, taxes, and a bit of cushion —
+              not just the hours you hope to work.
+            </p>
+          </article>
+
+          <article class="card article-card">
+            <div class="number-badge">02</div>
+            <h3>Adjust for real billable time</h3>
+            <p>
+              Freelancers rarely bill every working hour. Admin, sales, revisions, and client communication
+              all reduce your true billable capacity.
+            </p>
+          </article>
+
+          <article class="card article-card">
+            <div class="number-badge">03</div>
+            <h3>Turn numbers into a quote</h3>
+            <p>
+              A pricing calculator is the internal step. The next step is turning those numbers into a
+              clean quote or proposal the client can actually review.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2">
+        <article class="card formula-box">
+          Freelance rate = <br />
+          <span style="color:#bff3ff;">income goal + costs + tax reserve + cushion</span><br />
+          divided by<br />
+          <span style="color:#c9f7d1;">real annual billable hours</span>
+        </article>
+
+        <article class="card article-card">
+          <h3>What affects your rate the most?</h3>
+          <ul class="checklist">
+            <li><span class="check">✓</span><span>Your target income</span></li>
+            <li><span class="check">✓</span><span>Your annual business costs</span></li>
+            <li><span class="check">✓</span><span>Your tax reserve</span></li>
+            <li><span class="check">✓</span><span>How many weeks you can realistically bill</span></li>
+            <li><span class="check">✓</span><span>How many hours per week are truly billable</span></li>
+            <li><span class="check">✓</span><span>Your profit cushion / buffer</span></li>
+          </ul>
+          <div class="callout">
+            The fewer real billable hours you have, the higher your hourly rate needs to be.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="mistakes">
+      <div class="container">
+        <div class="section-head">
+          <h2>Common freelance pricing mistakes</h2>
+          <p>
+            Many freelancers do not undercharge because they are bad at math. They undercharge because they
+            ignore hidden work and price only the visible task.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card tip-card">
+            <h3>Charging from instinct instead of structure</h3>
+            <p>
+              “This feels like maybe $300” is not a pricing method. A calculator gives you a better starting
+              point before you adjust for project complexity or value.
+            </p>
+          </article>
+
+          <article class="card tip-card">
+            <h3>Assuming every hour is billable</h3>
+            <p>
+              If you work 40 hours per week, that does not mean you can bill 40. Most freelancers lose a lot
+              of time to calls, revisions, admin, and sales.
+            </p>
+          </article>
+
+          <article class="card tip-card">
+            <h3>Ignoring taxes and costs</h3>
+            <p>
+              Your pricing has to cover software, equipment, subscriptions, accounting, taxes, and time that
+              is not directly client-paid.
+            </p>
+          </article>
+
+          <article class="card tip-card">
+            <h3>Sending the spreadsheet to the client</h3>
+            <p>
+              The calculator is for your internal pricing decisions. Clients should usually see a clean quote,
+              proposal, or invoice — not your working sheet.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow">
+      <div class="container">
+        <div class="section-head">
+          <h2>A practical pricing workflow for freelancers</h2>
+          <p>
+            This is the workflow built into Client Ready Kit: calculator first, proposal template next.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h3>Use the pricing calculator internally</h3>
+              <p>
+                Start by calculating a recommended rate based on your annual goals and realistic billable time.
+                Then optionally choose your own manual hourly rate if you want to round up, round down, or adjust for the project.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h3>Build the quote</h3>
+              <p>
+                Turn your chosen rate into line items, hours, subtotals, and a final quote. This gives you
+                a cleaner internal estimate before you prepare the client-facing version.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h3>Send the proposal</h3>
+              <p>
+                Copy the final scope and pricing into the Word proposal template. That becomes the polished
+                document the client actually reviews.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-num">4</div>
+            <div>
+              <h3>Invoice after approval</h3>
+              <p>
+                Once the project is approved or payment is due, use the invoice template to bill the client
+                professionally and keep the workflow consistent.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card cta-card">
+          <h2>Want the actual pricing calculator, quote builder, and proposal workflow?</h2>
+          <p>
+            Client Ready Kit gives you the reusable workbook and proposal template so you can price projects,
+            build quotes, and send cleaner proposals without starting from scratch every time.
+          </p>
+          <div class="cta-row" style="justify-content:center;">
+            <button class="btn btn-primary buy-button" type="button">Get Client Ready Kit</button>
+            <a class="btn btn-secondary" href="/">Back to homepage</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p>Quick answers around freelance pricing calculators and rate setting.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card faq-item">
+            <h3>Should I charge the exact rate the calculator gives me?</h3>
+            <p>
+              Not necessarily. A calculator gives you a strong baseline. You may still adjust based on urgency,
+              complexity, scope risk, client value, or how you want to position your services.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Can I use a manual rate instead?</h3>
+            <p>
+              Yes. That is one reason the Client Ready Kit workbook includes a manual hourly rate override.
+              The calculator gives you a recommendation, but you can still choose the rate you want to use.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Do clients see the calculator?</h3>
+            <p>
+              Usually no. The calculator is for internal pricing decisions. Clients should usually receive
+              a quote, proposal, or invoice instead of the spreadsheet itself.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>What if I price by project instead of by hour?</h3>
+            <p>
+              The calculator still helps because it shows your pricing floor. Even if you present a fixed
+              project fee, you still need to understand whether the numbers make sense underneath.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Does this page include a live calculator?</h3>
+            <p>
+              No. This page explains the pricing logic and workflow. The actual reusable pricing calculator
+              workbook is included inside Client Ready Kit.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>What files are included in Client Ready Kit?</h3>
+            <p>
+              The kit includes an Excel workbook for pricing, quotes, invoicing, and onboarding, plus a
+              Word proposal template for client-facing project proposals.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Client Ready Kit</div>
+      <div class="small-links">
+        <a href="/">Home</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/checkout.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function openCheckout() {
+      if (window.LemonSqueezy && window.CHECKOUT_URL) {
+        window.LemonSqueezy.Url.Open(window.CHECKOUT_URL);
+      } else if (window.CHECKOUT_URL) {
+        window.location.href = window.CHECKOUT_URL;
+      } else {
+        alert("Checkout link not found.");
+      }
+    }
+
+    document.querySelectorAll(".buy-button").forEach((button) => {
+      button.addEventListener("click", function () {
+        openCheckout();
+      });
+    });
+  </script>
+</body>
+</html>
