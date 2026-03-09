@@ -19,6 +19,7 @@
     content="Freelance starter pack for pricing, quotes, invoices, and proposals."
   />
   <meta property="og:url" content="https://clientreadykit.com/" />
+  <meta property="og:image" content="https://clientreadykit.com/client-ready-kit-thumbnail-1600x1200.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Client Ready Kit" />
@@ -26,6 +27,7 @@
     name="twitter:description"
     content="Freelance starter pack for pricing, quotes, invoices, and proposals."
   />
+  <meta name="twitter:image" content="https://clientreadykit.com/client-ready-kit-thumbnail-1600x1200.png" />
 
   <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
 
@@ -180,13 +182,13 @@
     }
 
     .hero {
-      padding: 64px 0 34px;
+      padding: 72px 0 40px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 28px;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      gap: 34px;
       align-items: center;
     }
 
@@ -204,18 +206,19 @@
     }
 
     h1 {
-      margin: 0 0 14px;
-      font-size: clamp(2.3rem, 5.8vw, 5rem);
-      line-height: 0.98;
+      margin: 0 0 16px;
+      font-size: clamp(2.4rem, 5vw, 4.7rem);
+      line-height: 1.02;
       letter-spacing: -0.05em;
-      max-width: 10.8ch;
+      max-width: 12ch;
+      text-wrap: balance;
     }
 
     .hero p.lead {
       margin: 0 0 24px;
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       color: var(--muted);
-      max-width: 62ch;
+      max-width: 60ch;
     }
 
     .cta-row {
@@ -245,161 +248,20 @@
       backdrop-filter: blur(14px);
     }
 
-    .preview-shell {
+    .hero-image-wrap {
       padding: 18px;
-      position: relative;
-      overflow: hidden;
-      min-height: 540px;
       background:
         radial-gradient(circle at top right, rgba(52, 211, 153, 0.14), transparent 0 28%),
         radial-gradient(circle at bottom left, rgba(125, 211, 252, 0.12), transparent 0 30%),
         rgba(255,255,255,0.05);
     }
 
-    .float-chip {
-      position: absolute;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #ebfbff;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.08);
-      box-shadow: var(--shadow);
-    }
-
-    .chip-1 {
-      top: 22px;
-      right: 24px;
-    }
-
-    .chip-2 {
-      left: 18px;
-      bottom: 22px;
-    }
-
-    .preview-window {
-      position: absolute;
-      border-radius: 22px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: #ffffff;
-      color: #102033;
+    .hero-image {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
       box-shadow: 0 18px 50px rgba(0,0,0,0.28);
     }
-
-    .preview-window.top {
-      width: 76%;
-      left: 7%;
-      top: 8%;
-      transform: rotate(-4deg);
-    }
-
-    .preview-window.bottom {
-      width: 78%;
-      right: 5%;
-      bottom: 7%;
-      transform: rotate(5deg);
-    }
-
-    .window-bar {
-      height: 42px;
-      background: #edf3fb;
-      border-bottom: 1px solid #d9e4f0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 0 14px;
-    }
-
-    .window-bar span {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: #c8d4e2;
-      display: inline-block;
-    }
-
-    .sheet-area,
-    .doc-area {
-      padding: 16px;
-      min-height: 250px;
-      background:
-        linear-gradient(#edf3f9 1px, transparent 1px),
-        linear-gradient(90deg, #edf3f9 1px, transparent 1px);
-      background-size: 30px 30px;
-    }
-
-    .mini-panel {
-      background: white;
-      border: 1px solid #d9e4f0;
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 10px 24px rgba(16, 32, 51, 0.08);
-    }
-
-    .mini-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      gap: 12px;
-    }
-
-    .mini-title strong {
-      font-size: 0.98rem;
-      color: #102033;
-    }
-
-    .pill {
-      font-size: 0.72rem;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: #eaf6ff;
-      color: #04638b;
-      font-weight: 800;
-    }
-
-    .bar {
-      height: 12px;
-      border-radius: 999px;
-      background: #e4edf6;
-      margin-bottom: 10px;
-    }
-
-    .bar.short { width: 42%; }
-    .bar.mid { width: 66%; }
-    .bar.long { width: 100%; }
-
-    .bar.green { background: #d9f8ea; }
-    .bar.blue { background: #d8f0ff; }
-    .bar.purple { background: #ece5ff; }
-
-    .doc-card {
-      background: white;
-      border: 1px solid #d9e4f0;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 10px 24px rgba(16, 32, 51, 0.08);
-    }
-
-    .doc-card h3 {
-      margin: 0 0 12px;
-      font-size: 1rem;
-      color: #102033;
-    }
-
-    .doc-line {
-      height: 10px;
-      border-radius: 999px;
-      background: #e5edf7;
-      margin-bottom: 10px;
-    }
-
-    .doc-line.tiny { width: 24%; }
-    .doc-line.small { width: 40%; }
-    .doc-line.medium { width: 64%; }
-    .doc-line.large { width: 100%; }
 
     section {
       padding: 36px 0;
@@ -595,12 +457,12 @@
         padding-top: 42px;
       }
 
-      .preview-shell {
-        min-height: 500px;
-      }
-
       .nav {
         display: none;
+      }
+
+      h1 {
+        max-width: 13ch;
       }
     }
 
@@ -625,38 +487,6 @@
         flex-direction: column;
       }
 
-      .preview-shell {
-        min-height: 430px;
-        padding: 14px;
-      }
-
-      .preview-window.top {
-        width: 86%;
-        left: 2%;
-        top: 8%;
-      }
-
-      .preview-window.bottom {
-        width: 86%;
-        right: 2%;
-        bottom: 8%;
-      }
-
-      .float-chip {
-        font-size: 0.78rem;
-        padding: 8px 10px;
-      }
-
-      .chip-1 {
-        top: 12px;
-        right: 12px;
-      }
-
-      .chip-2 {
-        left: 10px;
-        bottom: 12px;
-      }
-
       .feature,
       .benefit,
       .price-card,
@@ -664,6 +494,11 @@
       .compat-card,
       .final-cta {
         padding: 20px;
+      }
+
+      h1 {
+        max-width: none;
+        font-size: clamp(2.2rem, 10vw, 3.3rem);
       }
     }
   </style>
@@ -715,10 +550,10 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">Freelance Starter Pack for Pricing, Quotes, Invoices & Proposals</div>
-          <h1>Look client-ready from day one.</h1>
+          <h1>Professional freelancer pricing, quotes, and proposals — without the setup headache.</h1>
           <p class="lead">
-            Client Ready Kit helps freelancers price projects faster, send cleaner proposals,
-            create simple quotes, and invoice professionally without building everything from scratch.
+            Client Ready Kit gives you a clean Excel workbook for internal pricing and quoting,
+            plus a client-facing Word proposal template you can reuse for real projects.
           </p>
 
           <div class="cta-row">
@@ -734,45 +569,12 @@
         </div>
 
         <div class="hero-visual">
-          <div class="card preview-shell">
-            <div class="float-chip chip-1">Pricing + Quotes + Invoices</div>
-            <div class="float-chip chip-2">Proposal template included</div>
-
-            <div class="preview-window top" aria-hidden="true">
-              <div class="window-bar">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="sheet-area">
-                <div class="mini-panel">
-                  <div class="mini-title">
-                    <strong>Pricing Calculator</strong>
-                    <div class="pill">Excel</div>
-                  </div>
-                  <div class="bar long blue"></div>
-                  <div class="bar mid"></div>
-                  <div class="bar short"></div>
-                  <div class="bar long green"></div>
-                  <div class="bar mid"></div>
-                  <div class="bar long purple"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="preview-window bottom" aria-hidden="true">
-              <div class="window-bar">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="doc-area">
-                <div class="doc-card">
-                  <h3>Freelance Proposal Template</h3>
-                  <div class="doc-line medium"></div>
-                  <div class="doc-line large"></div>
-                  <div class="doc-line large"></div>
-                  <div class="doc-line small"></div>
-                  <div class="doc-line tiny"></div>
-                </div>
-              </div>
-            </div>
+          <div class="card hero-image-wrap">
+            <img
+              class="hero-image"
+              src="/client-ready-kit-thumbnail-1600x1200.png"
+              alt="Client Ready Kit workbook and proposal template preview"
+            />
           </div>
         </div>
       </div>
