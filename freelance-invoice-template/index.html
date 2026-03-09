@@ -1,1 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Freelance Invoice Template | How to Send Clear Client Invoices</title>
+  <meta
+    name="description"
+    content="Learn how to structure a freelance invoice, what to include, common invoicing mistakes to avoid, and how to send cleaner client invoices with more confidence."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://clientreadykit.com/freelance-invoice-template/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Freelance Invoice Template | How to Send Clear Client Invoices" />
+  <meta
+    property="og:description"
+    content="A practical guide to creating freelance invoices that look professional, reduce confusion, and help you get paid more smoothly."
+  />
+  <meta property="og:url" content="https://clientreadykit.com/freelance-invoice-template/" />
+  <meta property="og:image" content="https://clientreadykit.com/client-ready-kit-thumbnail-1600x1200.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Freelance Invoice Template | How to Send Clear Client Invoices" />
+  <meta
+    name="twitter:description"
+    content="A practical guide to creating freelance invoices that look professional, reduce confusion, and help you get paid more smoothly."
+  />
+  <meta name="twitter:image" content="https://clientreadykit.com/client-ready-kit-thumbnail-1600x1200.png" />
+
+  <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0d1a2d;
+      --card: rgba(255, 255, 255, 0.06);
+      --text: #f8fbff;
+      --muted: #b8c4d8;
+      --line: rgba(255, 255, 255, 0.12);
+      --accent: #7dd3fc;
+      --accent-2: #a78bfa;
+      --accent-3: #34d399;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(125, 211, 252, 0.18), transparent 0 32%),
+        radial-gradient(circle at 90% 0%, rgba(167, 139, 250, 0.16), transparent 0 28%),
+        linear-gradient(180deg, #06111d 0%, #0a1626 45%, #07111f 100%);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: rgba(6, 17, 29, 0.68);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .topbar-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(125, 211, 252, 0.95), rgba(167, 139, 250, 0.95));
+      box-shadow: 0 10px 24px rgba(125, 211, 252, 0.24);
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: 10px;
+      background: rgba(7, 17, 31, 0.2);
+      border: 1px solid rgba(255,255,255,0.34);
+    }
+
+    .brand span {
+      font-size: 1rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 20px;
+      font: inherit;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      cursor: pointer;
+      transition: transform 0.2s ease, filter 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
+    }
+
+    .btn-primary {
+      color: #08101b;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 18px 36px rgba(125, 211, 252, 0.18);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+    }
+
+    .hero {
+      padding: 68px 0 34px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: #dff7ff;
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 4.1vw, 3.7rem);
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+      max-width: 13ch;
+      text-wrap: balance;
+    }
+
+    .hero p.lead {
+      margin: 0 0 22px;
+      font-size: 1.06rem;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 0 0 18px;
+    }
+
+    .microproof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-image-wrap {
+      padding: 12px;
+      background:
+        radial-gradient(circle at top right, rgba(52, 211, 153, 0.14), transparent 0 28%),
+        radial-gradient(circle at bottom left, rgba(125, 211, 252, 0.12), transparent 0 30%),
+        rgba(255,255,255,0.05);
+      transform: translateY(-14px);
+    }
+
+    .hero-image {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.28);
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-head {
+      margin-bottom: 22px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 3.8vw, 2.6rem);
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 66ch;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .article-card,
+    .tip-card,
+    .faq-item,
+    .cta-card {
+      padding: 24px;
+    }
+
+    .article-card h3,
+    .tip-card h3,
+    .faq-item h3 {
+      margin: 0 0 10px;
+      font-size: 1.06rem;
+      letter-spacing: -0.02em;
+    }
+
+    .article-card p,
+    .tip-card p,
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--muted);
+    }
+
+    .check {
+      color: #baf7d2;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .number-badge {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      font-weight: 900;
+      color: #051018;
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+      box-shadow: 0 12px 24px rgba(125, 211, 252, 0.16);
+    }
+
+    .callout {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: #051018;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+
+    .step h3 {
+      margin: 0 0 6px;
+      font-size: 1.04rem;
+      letter-spacing: -0.02em;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .cta-card {
+      text-align: center;
+      background:
+        radial-gradient(circle at top left, rgba(125,211,252,0.14), transparent 0 26%),
+        radial-gradient(circle at bottom right, rgba(167,139,250,0.12), transparent 0 30%),
+        rgba(255,255,255,0.05);
+    }
+
+    .cta-card h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      letter-spacing: -0.05em;
+    }
+
+    .cta-card p {
+      margin: 0 auto 18px;
+      color: var(--muted);
+      max-width: 58ch;
+    }
+
+    .footer {
+      padding: 28px 0 52px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 18px;
+    }
+
+    .small-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .small-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero-image-wrap {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(var(--max), calc(100% - 20px));
+      }
+
+      .topbar-inner {
+        min-height: 64px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      h1 {
+        max-width: none;
+        font-size: clamp(2.1rem, 10vw, 3.2rem);
+      }
+
+      .article-card,
+      .tip-card,
+      .faq-item,
+      .cta-card {
+        padding: 20px;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+      }
+
+      .step-num {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Freelance Invoice Template | How to Send Clear Client Invoices",
+    "description":"A practical guide to creating freelance invoices that look professional, reduce confusion, and help you get paid more smoothly.",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://clientreadykit.com/freelance-invoice-template/"
+    },
+    "author":{
+      "@type":"Organization",
+      "name":"Client Ready Kit"
+    },
+    "publisher":{
+      "@type":"Organization",
+      "name":"Client Ready Kit"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="/" aria-label="Client Ready Kit home">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span>Client Ready Kit</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#included">What to include</a>
+        <a href="#mistakes">Common mistakes</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <button class="btn btn-secondary buy-button" type="button">
+        Buy for $12
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Freelance Invoice Template Guide</div>
+          <h1>How to send freelance invoices that look professional and get paid more smoothly.</h1>
+          <p class="lead">
+            A good freelance invoice should be simple, readable, and easy to process. It should clearly show
+            who the invoice is for, what the client is paying for, how much is due, and when payment is expected.
+          </p>
+
+          <div class="cta-row">
+            <button class="btn btn-primary buy-button" type="button">Get Client Ready Kit</button>
+            <a class="btn btn-secondary" href="#included">See what to include</a>
+          </div>
+
+          <div class="microproof">
+            <span>Useful guide</span>
+            <span>Cleaner invoices</span>
+            <span>Reusable toolkit</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="card hero-image-wrap">
+            <img
+              class="hero-image"
+              src="/client-ready-kit-thumbnail-1600x1200.png"
+              alt="Client Ready Kit invoice template and workbook preview"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="included">
+      <div class="container">
+        <div class="section-head">
+          <h2>What a freelance invoice template should include</h2>
+          <p>
+            A client should not need to guess what the invoice means, what period it covers, or how to pay it.
+            A clean invoice reduces friction and makes you look more organized.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card article-card">
+            <div class="number-badge">01</div>
+            <h3>Invoice number</h3>
+            <p>
+              Each invoice should have a clear reference number so you and the client can track it properly.
+            </p>
+          </article>
+
+          <article class="card article-card">
+            <div class="number-badge">02</div>
+            <h3>Client details</h3>
+            <p>
+              Include the client name and any necessary billing information so the invoice is clearly addressed.
+            </p>
+          </article>
+
+          <article class="card article-card">
+            <div class="number-badge">03</div>
+            <h3>Services or deliverables</h3>
+            <p>
+              Show what the client is paying for in plain language, whether that is a project fee, milestone, or hourly work.
+            </p>
+          </article>
+
+          <article class="card article-card">
+            <div class="number-badge">04</div>
+            <h3>Total amount due</h3>
+            <p>
+              The amount due should be obvious at a glance. If tax applies, make sure the final total is still easy to read.
+            </p>
+          </article>
+
+          <article class="card article-card">
+            <div class="number-badge">05</div>
+            <h3>Due date</h3>
+            <p>
+              A professional invoice should state when payment is due, not just the date it was sent.
+            </p>
+          </article>
+
+          <article class="card article-card">
+            <div class="number-badge">06</div>
+            <h3>Payment instructions</h3>
+            <p>
+              Make it easy for the client to pay by telling them exactly how payment should be made.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2">
+        <article class="card article-card">
+          <h3>What makes an invoice feel professional?</h3>
+          <ul class="checklist">
+            <li><span class="check">✓</span><span>Clear structure</span></li>
+            <li><span class="check">✓</span><span>Readable totals</span></li>
+            <li><span class="check">✓</span><span>Simple wording</span></li>
+            <li><span class="check">✓</span><span>No missing payment details</span></li>
+            <li><span class="check">✓</span><span>An obvious due date</span></li>
+          </ul>
+          <div class="callout">
+            The best invoice is not the fanciest one. It is the one that makes payment feel easy and unambiguous.
+          </div>
+        </article>
+
+        <article class="card article-card">
+          <h3>Internal workflow first, invoice second</h3>
+          <p>
+            The cleanest invoicing workflow usually starts earlier: price the work, build the quote, confirm the scope,
+            and then issue the invoice once the client has approved the project or payment milestone.
+          </p>
+          <div class="callout">
+            This is why Client Ready Kit includes pricing, quotes, proposal flow, and the invoice template in one toolkit.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="mistakes">
+      <div class="container">
+        <div class="section-head">
+          <h2>Common freelance invoicing mistakes</h2>
+          <p>
+            Many payment delays happen because the invoice is unclear, incomplete, or inconsistent with what the client expected.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card tip-card">
+            <h3>No due date</h3>
+            <p>
+              If the invoice does not clearly state when payment is due, clients often default to their own timeline.
+            </p>
+          </article>
+
+          <article class="card tip-card">
+            <h3>Unclear line items</h3>
+            <p>
+              Vague descriptions can slow down approval or create unnecessary back-and-forth about what is being billed.
+            </p>
+          </article>
+
+          <article class="card tip-card">
+            <h3>Missing payment instructions</h3>
+            <p>
+              An invoice should make paying easy. If the client has to ask how to pay, the document is incomplete.
+            </p>
+          </article>
+
+          <article class="card tip-card">
+            <h3>Sending an invoice too early or too late</h3>
+            <p>
+              A smooth workflow matters. The invoice should arrive at the right stage — after approval, at a milestone, or when payment is due.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow">
+      <div class="container">
+        <div class="section-head">
+          <h2>A simple freelance invoicing workflow</h2>
+          <p>
+            Better invoices usually come from a better project workflow, not just a better-looking template.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h3>Price the work first</h3>
+              <p>
+                Start by knowing what the work is worth internally, so your invoice later matches an intentional pricing decision.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h3>Quote and confirm the scope</h3>
+              <p>
+                Use a quote or proposal to align on scope, deliverables, and totals before you move into billing.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h3>Issue the invoice at the right moment</h3>
+              <p>
+                Send the invoice when the agreement says payment is due — for example upfront, at a milestone, or after delivery.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-num">4</div>
+            <div>
+              <h3>Keep the billing details clear</h3>
+              <p>
+                Include totals, due date, and payment instructions so the client can process payment without confusion.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card cta-card">
+          <h2>Want the actual invoice template, pricing workbook, and quote workflow?</h2>
+          <p>
+            Client Ready Kit gives you the reusable workbook for pricing and quotes, plus the invoice and proposal templates so you can run a cleaner freelance workflow.
+          </p>
+          <div class="cta-row" style="justify-content:center;">
+            <button class="btn btn-primary buy-button" type="button">Get Client Ready Kit</button>
+            <a class="btn btn-secondary" href="/">Back to homepage</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p>Quick answers around freelance invoices and billing structure.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card faq-item">
+            <h3>What should a freelance invoice include?</h3>
+            <p>
+              At minimum: invoice number, client details, what the client is paying for, total due, due date, and payment instructions.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Should I invoice before or after the work is done?</h3>
+            <p>
+              That depends on your payment terms. Some freelancers invoice upfront, some at milestones, and some after delivery.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Should I include tax on the invoice?</h3>
+            <p>
+              If tax applies in your situation, yes. The important thing is to show it clearly so the total due is easy to understand.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Can I invoice from a spreadsheet?</h3>
+            <p>
+              Yes, many freelancers do. The important part is that the invoice still looks clean, complete, and clear for the client.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Does this page include a live invoice generator?</h3>
+            <p>
+              No. This page explains the structure and workflow. The actual reusable invoice template is included inside Client Ready Kit.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>What does Client Ready Kit include?</h3>
+            <p>
+              It includes an Excel workbook for pricing, quotes, invoicing, and onboarding, plus a Word proposal template for client-facing project documents.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Client Ready Kit</div>
+      <div class="small-links">
+        <a href="/">Home</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/checkout.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function openCheckout() {
+      if (window.LemonSqueezy && window.CHECKOUT_URL) {
+        window.LemonSqueezy.Url.Open(window.CHECKOUT_URL);
+      } else if (window.CHECKOUT_URL) {
+        window.location.href = window.CHECKOUT_URL;
+      } else {
+        alert("Checkout link not found.");
+      }
+    }
+
+    document.querySelectorAll(".buy-button").forEach((button) => {
+      button.addEventListener("click", function () {
+        openCheckout();
+      });
+    });
+  </script>
+</body>
+</html>
