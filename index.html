@@ -623,10 +623,12 @@
     "category":"Digital Product",
     "offers":{
       "@type":"Offer",
+      "url":"https://clientreadykit.com/",
       "priceCurrency":"USD",
       "price":"12",
+      "priceValidUntil":"2025-12-31",
       "availability":"https://schema.org/InStock",
-      "url":"https://clientreadykit.com/"
+      "itemCondition":"https://schema.org/NewCondition"
     }
   }
   </script>
@@ -1052,22 +1054,22 @@
   </footer>
 
   <script src="/checkout.js"></script>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  function openCheckout() {
-    if (window.CHECKOUT_URL) {
-      window.location.href = window.CHECKOUT_URL;
-    } else {
-      alert("Checkout link not found.");
+    function openCheckout() {
+      if (window.CHECKOUT_URL) {
+        window.location.href = window.CHECKOUT_URL;
+      } else {
+        alert("Checkout link not found.");
+      }
     }
-  }
 
-  document.querySelectorAll(".buy-button").forEach((button) => {
-    button.addEventListener("click", function () {
-      openCheckout();
+    document.querySelectorAll(".buy-button").forEach((button) => {
+      button.addEventListener("click", function () {
+        openCheckout();
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
