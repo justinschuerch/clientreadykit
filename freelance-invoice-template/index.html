@@ -29,8 +29,6 @@
   />
   <meta name="twitter:image" content="https://clientreadykit.com/client-ready-kit-thumbnail-1600x1200.png" />
 
-  <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
-
   <style>
     :root {
       --bg: #07111f;
@@ -934,9 +932,7 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     function openCheckout() {
-      if (window.LemonSqueezy && window.CHECKOUT_URL) {
-        window.LemonSqueezy.Url.Open(window.CHECKOUT_URL);
-      } else if (window.CHECKOUT_URL) {
+      if (window.CHECKOUT_URL) {
         window.location.href = window.CHECKOUT_URL;
       } else {
         alert("Checkout link not found.");
