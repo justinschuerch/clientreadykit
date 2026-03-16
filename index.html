@@ -4,28 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Client Ready Kit | Freelance Starter Pack for Pricing, Quotes, Invoices & Proposals</title>
+  <title>Client Ready Kit | Freelance Templates for Pricing, Quotes, Proposals & Invoices</title>
   <meta
     name="description"
-    content="Client Ready Kit is a freelance starter pack with a pricing calculator, quote builder, invoice template, proposal template, and onboarding checklist."
+    content="Client Ready Kit is a freelance starter pack with a pricing calculator, quote builder, invoice template, proposal template, and onboarding checklist for a cleaner client workflow."
   />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://clientreadykit.com/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Client Ready Kit" />
+  <meta property="og:title" content="Client Ready Kit | Freelance Templates for Pricing, Quotes, Proposals & Invoices" />
   <meta
     property="og:description"
-    content="Freelance starter pack for pricing, quotes, invoices, and proposals."
+    content="Freelance starter pack with a pricing calculator, quote builder, invoice template, proposal template, and onboarding checklist."
   />
   <meta property="og:url" content="https://clientreadykit.com/" />
   <meta property="og:image" content="https://clientreadykit.com/client-ready-kit-thumbnail-1600x1200.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Client Ready Kit" />
+  <meta name="twitter:title" content="Client Ready Kit | Freelance Templates for Pricing, Quotes, Proposals & Invoices" />
   <meta
     name="twitter:description"
-    content="Freelance starter pack for pricing, quotes, invoices, and proposals."
+    content="Freelance starter pack with a pricing calculator, quote builder, invoice template, proposal template, and onboarding checklist."
   />
   <meta name="twitter:image" content="https://clientreadykit.com/client-ready-kit-thumbnail-1600x1200.png" />
 
@@ -216,7 +216,19 @@
       margin: 0 0 24px;
       font-size: 1.08rem;
       color: var(--muted);
-      max-width: 60ch;
+      max-width: 62ch;
+    }
+
+    .support-copy {
+      margin-top: 14px;
+      color: var(--muted);
+      max-width: 64ch;
+    }
+
+    .support-copy a.inline-link {
+      color: #eaf7ff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .cta-row {
@@ -280,7 +292,7 @@
     .section-head p {
       margin: 0;
       color: var(--muted);
-      max-width: 64ch;
+      max-width: 68ch;
     }
 
     .grid-3 {
@@ -302,7 +314,8 @@
     .compat-card,
     .final-cta,
     .guide-card,
-    .preview-card {
+    .preview-card,
+    .workflow-card {
       padding: 24px;
     }
 
@@ -311,7 +324,8 @@
     .faq-item h3,
     .compat-card h3,
     .guide-card h3,
-    .preview-card h3 {
+    .preview-card h3,
+    .workflow-card h3 {
       margin: 0 0 10px;
       font-size: 1.08rem;
       letter-spacing: -0.02em;
@@ -323,7 +337,8 @@
     .compat-card p,
     .compat-card li,
     .guide-card p,
-    .preview-card p {
+    .preview-card p,
+    .workflow-card p {
       margin: 0;
       color: var(--muted);
     }
@@ -395,19 +410,22 @@
       font-size: 0.95rem;
     }
 
-    .guide-card {
+    .guide-card,
+    .workflow-card {
       position: relative;
       overflow: hidden;
       transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
 
-    .guide-card:hover {
+    .guide-card:hover,
+    .workflow-card:hover {
       transform: translateY(-3px);
       border-color: rgba(125, 211, 252, 0.26);
       background: rgba(255, 255, 255, 0.08);
     }
 
-    .guide-card .guide-kicker {
+    .guide-card .guide-kicker,
+    .workflow-kicker {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -511,7 +529,7 @@
     }
 
     .final-cta p {
-      max-width: 58ch;
+      max-width: 60ch;
       margin: 0 auto 20px;
       color: var(--muted);
     }
@@ -594,7 +612,8 @@
       .compat-card,
       .final-cta,
       .guide-card,
-      .preview-card {
+      .preview-card,
+      .workflow-card {
         padding: 20px;
       }
 
@@ -635,7 +654,7 @@
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="#top" aria-label="Client Ready Kit home">
+      <a class="brand" href="/" aria-label="Client Ready Kit home">
         <div class="brand-mark" aria-hidden="true"></div>
         <span>Client Ready Kit</span>
       </a>
@@ -643,7 +662,7 @@
       <nav class="nav" aria-label="Primary">
         <a href="#included">What's included</a>
         <a href="#previews">Previews</a>
-        <a href="#benefits">Why it helps</a>
+        <a href="#workflow">Workflow</a>
         <a href="#guides">Guides</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
@@ -655,15 +674,15 @@
     </div>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Freelance Starter Pack for Pricing, Quotes, Invoices & Proposals</div>
-          <h1>Freelance starter pack for pricing, quotes, invoices, and proposals.</h1>
+          <div class="eyebrow">Freelance Starter Pack for Pricing, Quotes, Proposals & Invoices</div>
+          <h1>Freelance templates for pricing, quotes, proposals, and invoices.</h1>
           <p class="lead">
-            Client Ready Kit gives you a clean Excel workbook for internal pricing and quoting,
-            plus a client-facing Word proposal template you can reuse for real projects.
+            Client Ready Kit gives you a clean Excel workbook for pricing and quoting work internally,
+            plus a client-facing Word proposal template you can reuse for real projects. It is built to help freelancers run a cleaner workflow from first estimate to final invoice.
           </p>
 
           <div class="cta-row">
@@ -676,6 +695,13 @@
             <span>Instant digital download</span>
             <span>Built for freelancers</span>
           </div>
+
+          <p class="support-copy">
+            The kit is designed around a practical client workflow: <a class="inline-link" href="/freelance-pricing-calculator/">price the work</a>,
+            <a class="inline-link" href="/freelance-quote-template/">build the quote</a>,
+            <a class="inline-link" href="/freelance-proposal-template/">send the proposal</a>,
+            and <a class="inline-link" href="/freelance-invoice-template/">invoice clearly</a>.
+          </p>
         </div>
 
         <div class="hero-visual">
@@ -693,10 +719,10 @@
     <section id="included">
       <div class="container">
         <div class="section-head">
-          <h2>Everything you need to stop improvising your client admin.</h2>
+          <h2>Everything you need to stop improvising your client admin</h2>
           <p>
-            Instead of piecing together random templates from the internet, get one clean starter pack
-            that helps you price work, quote projects, invoice clients, and send a polished proposal.
+            Instead of piecing together random templates from different places, get one clean starter pack
+            that helps you price work, quote projects, invoice clients, and send a polished proposal with a more consistent workflow.
           </p>
         </div>
 
@@ -705,7 +731,7 @@
             <div class="icon-badge">01</div>
             <h3>Pricing Calculator</h3>
             <p>
-              Estimate sustainable rates and project pricing faster, so you stop guessing what to charge.
+              Estimate a sustainable rate baseline from income goals, costs, tax reserve, and realistic billable time.
             </p>
           </article>
 
@@ -713,7 +739,7 @@
             <div class="icon-badge">02</div>
             <h3>Quote Builder</h3>
             <p>
-              Put together cleaner project quotes with a structure that feels professional and easy to send.
+              Turn your internal pricing into a cleaner project quote with clearer structure, line items, and totals.
             </p>
           </article>
 
@@ -721,7 +747,7 @@
             <div class="icon-badge">03</div>
             <h3>Invoice Template</h3>
             <p>
-              Send simple, presentable invoices without formatting documents from scratch every time.
+              Send simple, professional invoices with clear totals, due dates, and payment instructions.
             </p>
           </article>
 
@@ -729,7 +755,7 @@
             <div class="icon-badge">04</div>
             <h3>Proposal Template</h3>
             <p>
-              Use a ready-made proposal document to present scope, pricing, and next steps more confidently.
+              Use a ready-made proposal document to present scope, pricing, timeline, and next steps more confidently.
             </p>
           </article>
 
@@ -737,7 +763,7 @@
             <div class="icon-badge">05</div>
             <h3>Onboarding Checklist</h3>
             <p>
-              Keep your first client steps organized so projects start more smoothly and feel more professional.
+              Keep early client steps organized so projects start more smoothly and feel more professional from day one.
             </p>
           </article>
 
@@ -769,7 +795,7 @@
             <div class="preview-kicker">Workbook tab</div>
             <h3>Dashboard</h3>
             <p>
-              Start with a simple overview of the kit and move through the workflow step by step.
+              Start with a simple overview of the workflow and move through the files step by step.
             </p>
           </article>
 
@@ -780,7 +806,7 @@
             <div class="preview-kicker">Workbook tab</div>
             <h3>Pricing Calculator</h3>
             <p>
-              Set a rate baseline from income goals, billable time, costs, and your chosen manual override.
+              Set a rate baseline from income goals, billable time, business costs, and your chosen manual override.
             </p>
           </article>
 
@@ -802,7 +828,7 @@
             <div class="preview-kicker">Workbook tab</div>
             <h3>Invoice Template</h3>
             <p>
-              Prepare a simple invoice with totals, due details, and a more professional structure.
+              Prepare a simple invoice with totals, due details, and a cleaner billing structure.
             </p>
           </article>
 
@@ -831,13 +857,61 @@
       </div>
     </section>
 
+    <section id="workflow">
+      <div class="container">
+        <div class="section-head">
+          <h2>A simple freelance client workflow</h2>
+          <p>
+            Client Ready Kit is built around a sequence that many freelancers already follow. The difference is that the files are organized to make each stage cleaner and easier to repeat.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card workflow-card">
+            <div class="workflow-kicker">Step 01</div>
+            <h3>Price the work</h3>
+            <p>
+              Start with the pricing calculator to set a realistic baseline before you promise a number to the client.
+              If you want more detail, see the <a class="inline-link" href="/freelance-pricing-calculator/">freelance pricing calculator guide</a>.
+            </p>
+          </article>
+
+          <article class="card workflow-card">
+            <div class="workflow-kicker">Step 02</div>
+            <h3>Build the quote</h3>
+            <p>
+              Turn your internal numbers into a cleaner quote with deliverables, scope, totals, and a clear next step.
+              You can learn more in the <a class="inline-link" href="/freelance-quote-template/">freelance quote template guide</a>.
+            </p>
+          </article>
+
+          <article class="card workflow-card">
+            <div class="workflow-kicker">Step 03</div>
+            <h3>Send the proposal</h3>
+            <p>
+              Move the final scope, timeline, and pricing into a polished client-facing proposal that feels easier to approve.
+              The <a class="inline-link" href="/freelance-proposal-template/">freelance proposal template guide</a> explains the structure.
+            </p>
+          </article>
+
+          <article class="card workflow-card">
+            <div class="workflow-kicker">Step 04</div>
+            <h3>Invoice clearly</h3>
+            <p>
+              Once the work is approved or payment is due, send a clear invoice with due date and payment instructions.
+              The <a class="inline-link" href="/freelance-invoice-template/">freelance invoice template guide</a> covers the billing side.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="benefits">
       <div class="container">
         <div class="section-head">
-          <h2>Made for freelancers who want to look legit faster.</h2>
+          <h2>Made for freelancers who want to look more organized faster</h2>
           <p>
-            Client Ready Kit is not a giant complicated business system. It’s a practical starter pack
-            for freelancers who want cleaner client-facing files without wasting hours on setup.
+            Client Ready Kit is not a giant complicated business system. It is a practical starter pack for freelancers who want cleaner client-facing files without wasting hours building them from scratch.
           </p>
         </div>
 
@@ -869,10 +943,9 @@
     <section id="guides">
       <div class="container">
         <div class="section-head">
-          <h2>Helpful guides for freelancers</h2>
+          <h2>Freelance workflow guides</h2>
           <p>
-            Explore the practical guides behind the toolkit. Each one explains part of the workflow —
-            from pricing your work to sending cleaner quotes, invoices, and proposals.
+            These guides support the full workflow around the kit. Each one covers a different stage, so the pages reinforce each other instead of repeating the same intent.
           </p>
         </div>
 
@@ -881,7 +954,7 @@
             <div class="guide-kicker">Guide 01</div>
             <h3>Freelance Pricing Calculator</h3>
             <p>
-              Learn how to calculate your rate, set a pricing floor, and price projects with more confidence.
+              Learn how to calculate your rate, estimate real billable hours, and price projects with more confidence.
             </p>
             <div class="guide-link">Read guide <span>→</span></div>
           </a>
@@ -890,25 +963,25 @@
             <div class="guide-kicker">Guide 02</div>
             <h3>Freelance Quote Template</h3>
             <p>
-              Learn how to structure a quote that feels clear, professional, and easy for clients to approve.
-            </p>
-            <div class="guide-link">Read guide <span>→</span></div>
-          </a>
-
-          <a class="card guide-card" href="/freelance-invoice-template/">
-            <div class="guide-kicker">Guide 03</div>
-            <h3>Freelance Invoice Template</h3>
-            <p>
-              Learn what to include in a freelance invoice and how to make billing smoother and more professional.
+              Learn how to structure a quote with clearer scope, totals, exclusions, and an easier approval path.
             </p>
             <div class="guide-link">Read guide <span>→</span></div>
           </a>
 
           <a class="card guide-card" href="/freelance-proposal-template/">
-            <div class="guide-kicker">Guide 04</div>
+            <div class="guide-kicker">Guide 03</div>
             <h3>Freelance Proposal Template</h3>
             <p>
               Learn how to turn your scope, pricing, and timeline into a clean client-facing proposal document.
+            </p>
+            <div class="guide-link">Read guide <span>→</span></div>
+          </a>
+
+          <a class="card guide-card" href="/freelance-invoice-template/">
+            <div class="guide-kicker">Guide 04</div>
+            <h3>Freelance Invoice Template</h3>
+            <p>
+              Learn what to include in a freelance invoice, how payment terms work, and how to make billing smoother.
             </p>
             <div class="guide-link">Read guide <span>→</span></div>
           </a>
@@ -921,7 +994,7 @@
         <div class="grid-2">
           <article class="card price-card">
             <div class="section-head" style="margin-bottom: 12px;">
-              <h2>Simple launch pricing.</h2>
+              <h2>Simple launch pricing</h2>
               <p>
                 Start with the full pack now and reuse it across future projects.
               </p>
@@ -945,7 +1018,7 @@
             </div>
 
             <div class="notice">
-              This is a digital download. No subscription, no recurring charges.
+              This is a digital download. No subscription and no recurring charges.
             </div>
           </article>
 
@@ -969,9 +1042,9 @@
     <section class="center-cta">
       <div class="container">
         <div class="card final-cta">
-          <h2>Get organized before your next client project.</h2>
+          <h2>Get organized before your next client project</h2>
           <p>
-            Stop building invoices, proposals, and pricing sheets from scratch. Start with a clean freelance starter pack instead.
+            Stop building pricing sheets, quotes, proposals, and invoices from scratch. Start with a cleaner freelance workflow instead.
           </p>
           <div class="cta-row">
             <button class="btn btn-primary buy-button" type="button">Get the Starter Pack</button>
@@ -994,31 +1067,28 @@
           <article class="card faq-item">
             <h3>What exactly do I get?</h3>
             <p>
-              You get a downloadable freelance starter pack with a pricing calculator, quote builder,
-              invoice template, proposal template, and onboarding checklist.
+              You get a downloadable freelance starter pack with a pricing calculator, quote builder, invoice template, proposal template, and onboarding checklist.
             </p>
           </article>
 
           <article class="card faq-item">
             <h3>Is this a subscription?</h3>
             <p>
-              No. It’s a one-time purchase digital download.
+              No. It is a one-time purchase digital download.
             </p>
           </article>
 
           <article class="card faq-item">
             <h3>Do I need Microsoft Office?</h3>
             <p>
-              The files work best in Microsoft Excel and Word. Compatible apps may open them too,
-              but formulas or formatting can vary.
+              The files work best in Microsoft Excel and Word. Compatible apps may open them too, but formulas or formatting can vary.
             </p>
           </article>
 
           <article class="card faq-item">
             <h3>Who is this best for?</h3>
             <p>
-              New freelancers, solo consultants, and service providers who want clean client-facing files
-              without making them from scratch.
+              New freelancers, solo consultants, and service providers who want cleaner client-facing files without making them from scratch.
             </p>
           </article>
 
@@ -1030,9 +1100,9 @@
           </article>
 
           <article class="card faq-item">
-            <h3>Will more templates be added later?</h3>
+            <h3>What kind of workflow is this built for?</h3>
             <p>
-              Possibly. This launch version is intentionally simple and focused on the core client workflow.
+              It is built for a simple freelance workflow: price the work, build the quote, send the proposal, and invoice clearly once the project is approved or payment is due.
             </p>
           </article>
         </div>
@@ -1045,9 +1115,9 @@
       <div>© <span id="year"></span> Client Ready Kit</div>
       <div class="small-links">
         <a href="#included">What's included</a>
+        <a href="#workflow">Workflow</a>
         <a href="#guides">Guides</a>
         <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
       </div>
     </div>
   </footer>
